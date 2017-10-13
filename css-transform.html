@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS transform</title>
+<style>
+div {
+	padding: 40px 40px; 
+	width: 400px;
+
+	border-radius: 25px;
+	margin-left: auto;
+	margin-right: auto; 
+	margin-top: 100px;
+
+}
+
+.div1 {
+	background: dodgerblue; 
+}
+
+.div2 {
+	background: blue; 
+	transform: translate(100px, 50px); 
+}
+
+.div3 {
+	background: red; 
+	margin-top: 300px;
+	transform: scale(23, 3); 
+}
+
+.div4 {
+	background: red; 
+	margin-top: 300px;
+	transform: rotate(90deg); 
+}
+
+.div5 {
+	background: red; 
+	margin-top: 300px;
+    -webkit-transform: rotateX(30deg) rotateY(30deg) rotateZ(10deg); 
+}
+
+</style>
+</head>
+
+<body>
+
+<p>This example is based on code from the Microsoft presentations related to 98-375. This example shows how <em>transform</em> works in CSS3. Tested with Safari Browser.  </p>
+
+<div class="div1"> test </div>
+
+<div class="div2"> test translate </div>
+
+<div class="div3"> test scale </div>
+
+<div class="div4"> test 2d rotate </div>
+
+<div class="div5"> test 3d rotate  </div>
+
+</body>
+</html>

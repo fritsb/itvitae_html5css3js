@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS transition</title>
+<style>
+.container {
+	transition-property: width, height;
+	transition-duration: 3s; 
+	transition-delay: 1s;	
+}
+
+.div1 {
+	padding: 40px 40px; 
+	background: dodgerblue; 
+	width: 400px;
+	
+	border-radius: 25px;
+	margin-left: auto;
+	margin-right: auto; 
+	margin-top: 100px;
+}
+
+.div1:hover {
+	width: 600px;
+}
+
+.div2 {
+	padding: 40px 40px; 
+	background: dodgerblue; 
+	width: 400px;
+	
+	border-top-left-radius: 20px;
+	border-top-right-radius: 10px;
+	margin-left: auto;
+	margin-right: auto; 
+	margin-top: 100px;
+}
+
+.div2:hover {
+	width: 200px;
+}
+
+</style>
+</head>
+
+<body>
+
+<p>This example is based on code from the Microsoft presentations related to 98-375. This example shows how <em>transition</em> works in CSS3. Tested with Safari Browser.  </p>
+
+<div id="container">
+	<div class="div1"> first </div>
+
+	<div class="div2"> second </div>
+</div>
+
+</body>
+</html>

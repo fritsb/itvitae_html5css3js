@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS animation</title>
+<style>
+@keyframes fadeout {
+from { opacity: 1; }
+to { background-color: red; }
+}
+
+#container {
+	-webkit-animation-duration: 10s;
+	-webkit-animation-delay: 0s;
+	
+	background-color: goldenrod;
+	color: white;
+	
+}
+
+#container:hover {
+	-webkit-animation-name: fadeout; 
+}
+
+</style>
+</head>
+
+<body>
+
+<p>This example is based on code from the Microsoft presentations related to 98-375. This example shows how animations works in CSS3. Tested with Safari Browser.  </p>
+
+<div id="container">
+	test
+</div>
+
+</body>
+</html>

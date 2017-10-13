@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="la">
+<head>
+<meta charset="UTF-8">
+<title>CSS regions</title>
+<style>
+#source {
+	-webkit-flow-into: apple;
+}
+.region { 
+	-webkit-flow-from: apple;
+	background-color: #9ACD32; 
+    border: 1px solid black;
+    padding: 2px;
+    margin: 5px;
+    width: 400px;
+    height: 120px;
+	float: left;
+	
+	region-overflow: auto;
+	overflow: visible;
+}
+
+</style>
+</head>
+
+<body>
+
+<p>This example is based on code from the Microsoft presentations related to 98-375. This example shows how flow-into & flow-from works in CSS3. Tested with Safari Browser. </p>
+
+<div id="source">
+	<p>Lorem ipsum dolor sit amet, sit nonumy diceret phaedrum id, pro ei nonumes sapientem. Qui eu qualisque complectitur voluptatibus, graecis tractatos definitionem duo cu, nibh viderer his ut. In meliore appareat sit. Duo commodo forensibus ne. Pro an urbanitas percipitur, an vim brute lorem persequeris, qui fierent omittam singulis ut.</p>
+	
+	<p>Cu erat expetendis mea. Alia atqui adipisci cu cum, vix ut adhuc atomorum sensibus. Ubique verear repudiare pri et. An usu verear scripta equidem, vel ut iriure conclusionemque, qui no impedit recusabo. Vim ad quaeque accusamus, sed ad utamur mnesarchum deterruisset. Eligendi contentiones at vim, in per iudico cotidieque.</p>
+
+	<p>Te copiosae tacimates est, vis menandri nominati molestiae cu. Eu vide primis mucius vel. No vix ponderum sapientem, vis in fabulas fuisset, nostrud theophrastus nec ut. Graeco officiis te his.</p>
+
+	<p>Eripuit explicari dissentiunt id vis, ea sumo omnesque vim. Veritus phaedrum inimicus est in, qui cu aeque doctus repudiare. Per ei nullam audire, cum ea duis essent. Congue suscipit te nec, id usu vivendum conclusionemque, reque feugiat saperet ei sed. Prima intellegam complectitur ut his, nam modus nonumy te, eu ipsum inciderint vix. Ius ea paulo exerci necessitatibus, ne omnis dissentias usu. Nec et quidam integre sententiae, mentitum accusata te cum.</p>
+
+	<p>Officiis pertinacia mea in, ex odio aperiam mea. Vel vocent ocurreret moderatius an, an minim argumentum eum. An ridens graeco audire usu, vix congue semper probatus no, cu novum ludus vidisse eam. Est dicta semper scripta ei, iudico ancillae definiebas cum ut.</p>
+</div>
+
+<div id="region1" class="region"></div>
+<div id="region2" class="region"></div>
+<div id="region3" class="region"></div>
+<div id="region4" class="region"></div>
+<div id="region5" class="region"></div>
+
+</body>
+</html>
