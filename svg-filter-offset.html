@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SVG filter offset</title>
+<style>
+
+</style>
+</head>
+
+<body>
+
+<p>This example is based on code from the Microsoft presentations related to 98-375. This example shows how svg filters works. Tested with Safari Browser.  </p>
+
+<svg width="200" height="200">
+	<defs>
+		<filter id="i1" x="0" y="0" >
+			<feOffset in="SourceGraphic"  dx="5" dy="5" />
+		</filter>
+	</defs>
+	<rect width="150" height="150"  fill="grey" filter="url(#i1)" />
+	<rect width="150" height="150"  fill="plum" />
+</svg>
+
+</body>
+</html>
