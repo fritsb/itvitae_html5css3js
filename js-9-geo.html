@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Javascript geolocation</title>
+
+</head>
+<body>
+
+<p>This example is based on code from <a href="https://www.w3schools.com/html/html5_geolocation.asp" target="_blank">W3 schools</a> This example shows how javascript works with geolocation. Tested with Safari Browser.  </p>
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation();">Try It</button>
+
+<p id="result"></p>
+
+<script>
+var x = document.getElementById("result");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+
+/* view extended example of geolocation: https://html5demos.com/geo/ */
+</script>
+
+
+</body>
+</html>

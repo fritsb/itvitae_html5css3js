@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Javascript </title>
+<script>
+/* code from: https://www.html5rocks.com/en/tutorials/file/dndfiles/ 
+		&&		https://www.nczonline.net/blog/2012/05/08/working-with-files-in-javascript-part-1/  */
+
+function checkSupport() {
+	// Check for the various File API support.
+	if (window.File && window.FileReader && window.FileList && window.Blob) {
+	  // Great success! All the File APIs are supported.
+	} else {
+	  alert('The File APIs are not fully supported in this browser.');
+	}
+}
+
+</script>
+</head>
+
+<body onload="checkSupport();">
+<p>This example is based on code from html5rocks & nczoline. This example shows how javascript works with files. Tested with Safari Browser.  </p>
+
+<input type="file" id="your-files" multiple>
+<script>
+var control = document.getElementById("your-files");
+control.addEventListener("change", function(event) {
+
+    // When the control has changed, there are new files
+
+    var i = 0,
+        files = control.files,
+        len = files.length;
+
+    for (; i < len; i++) {
+        console.log("Filename: " + files[i].name);
+        console.log("Type: " + files[i].type);
+        console.log("Size: " + files[i].size + " bytes");
+    }
+
+}, false);
+</script>
+</body>
+</html>

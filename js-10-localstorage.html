@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Javascript </title>
+<script>
+// Store
+function store() {
+	localStorage.setItem("lastname", "Smiths");
+}
+
+// Retrieve
+function retrieve() {
+	document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+}
+
+// Init
+function init() {
+	store();
+}
+</script>
+</head>
+
+<body onload="init();">
+<p>This example is based on code from w3 schools. This example shows how javascript with localstorage. Tested with Safari Browser.  </p>
+
+<button onclick="retrieve()">Click me to retrieve cookie</button>
+<p id="result"></p>
+
+</body>
+</html>

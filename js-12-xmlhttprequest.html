@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Javascript </title>
+<script>
+function reqListener () {
+	var rawJSONresult = this.responseText;
+	// show raw result in console 
+	console.log(rawJSONresult);
+
+	// show raw result in a paragraph   
+	var rawresult = document.getElementById("rawresult");
+	rawresult.innerHTML = rawJSONresult;
+	
+	// show readable result in various elements
+	var jsonObj = JSON.parse(rawJSONresult);
+	var url = document.getElementById("url");	
+	var name = document.getElementById("name");	
+	var avatar = document.getElementById("avatar");	
+	
+	url.href = jsonObj[0].html_url;
+	name.innerHTML = jsonObj[0].login;
+	avatar.src = jsonObj[0].avatar_url;
+}
+
+function getJson() {
+	var githublink = "https://api.github.com/repos/fritsb/itvitae_html5css3js/contributors";
+
+	var oReq = new XMLHttpRequest();
+	oReq.addEventListener('load', reqListener);
+	oReq.open("get", githublink, true);
+	oReq.send();
+}
+
+
+</script>
+</head>
+
+<body onload="getJson();">
+<p>This example is based on code from mozilla. This example shows how javascript works with xmlhttprequest object. Tested with Safari Browser.  </p>
+
+<h1>Raw result</h1>
+<p id="rawresult"></p>
+
+<h1>Readable result</h1>
+<p id="result">
+	<a id="url" target="_blank">
+		<img id="avatar" src="" alt="">
+		<br>
+		<span id="name"></span>
+	</a>
+</p>
+
+</body>
+</html>

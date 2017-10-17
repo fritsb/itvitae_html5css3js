@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Javascript animation</title>
+<script>
+function move_paragraph() {
+	next = current + "px";
+	current += 1;
+	if(current > 600) {
+		current = 0;
+	}
+	paragraph.style.left = next;
+	// Pause for 18 ms before the next move
+	var rate = 18;
+	setTimeout(move_paragraph, rate);
+}
+function init() {
+	paragraph = document.getElementById("original");
+	paragraph.style.position = "absolute";
+	current = 100;
+	move_paragraph();
+}
+</script>
+</head>
+
+<body onload="init();">
+<p>This example is based on code from the Microsoft presentations related to 98-375. This example shows how javascript animations works. Tested with Safari Browser.  </p>
+
+<h1> Animate with JavaScript</h1>
+
+<p id="original">Do you see me scrolling across the screen??</p>
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Javascript createElement</title>
+<script>
+function show_image(src, width, height, alt) {
+	var img = document.createElement("img");
+	img.src = src;
+	img.width = width;
+	img.height = height;
+	img.alt = alt;
+	
+	document.body.appendChild(img);
+}
+</script>
+</head>
+<body>
+
+
+
+<p>This example is based on code from the Microsoft presentations related to 98-375. This example shows how javascript can add an element with createElement. Tested with Safari Browser.  </p>
+
+
+<button onclick="show_image('http://cdn.ikabus.com/3/3/media/original/logos/logo_itvitae_liggend_anders_denken.png','592','220','itvitae logo');">View logo</button>
+
+</body>
+</html>
