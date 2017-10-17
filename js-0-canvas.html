@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Canvas </title>
+<style>
+
+</style>
+<script>
+	function f1()  {
+		var canvas = document.getElementById("testCanvas");
+		context = canvas.getContext("2d");
+		context.fillStyle = "blue";
+		context.fillRect(10,20,200,100);
+		
+		context.font = "30px Arial";
+		context.strokeStyle = "white";
+		context.strokeText("Hello World",30,50);
+	}
+</script>
+</head>
+
+<body onload="f1();">
+
+<canvas id="testCanvas" height="300" width="500">
+</canvas>
+
+</body>
+</html>

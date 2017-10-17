@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Javascript intro</title>
+<script>
+function changeDisplay() {
+	var par1 = document.getElementById("par1");
+	var par2 = document.getElementById("par2");
+	
+	par1.style.display = "none";
+	par2.style.display = "block";
+}
+
+function reverseDisplay()  {
+	var par1 = document.getElementById("par1");
+	var par2 = document.getElementById("par2");
+
+	if(par1.style.display == "none") {
+		par1.style.display = "block";
+	}
+	else {
+		par1.style.display = "none";
+	}
+	if(par2.style.display == "none") {
+		par2.style.display = "block";
+	}
+	else {
+		par2.style.display = "none";
+	}
+}
+</script>
+</head>
+
+<body>
+
+<p>This example is based on code from the Microsoft presentations related to 98-375. This example shows how javascript basics work. Tested with Safari Browser.  </p>
+
+<p id="par1">You see me</p>
+
+<p id="par2" style="display:none;">You don't see me</p>
+
+<button onclick="changeDisplay();">Click me!</button>
+<button onclick="reverseDisplay();">No, click me!</button>
+
+</body>
+</html>

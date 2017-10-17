@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Javascript intro with jQuery</title>
+<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript">
+</script>
+
+<script>
+$( document ).ready(function() {
+	$("#btnClickMe").click(function() {
+	    //$("p").css("display","block");
+	    $("p").show();
+	    //$("#par1").show();
+        /* OR     $("p").show();  */
+        /* OR  for one element:   $("#par1").show();  */
+        
+	    $("#btnClickMe").hide();
+	});
+});
+
+</script>
+</head>
+
+<body>
+
+<p>This example is based on code from the Microsoft presentations related to 98-375. This example shows how javascript basics work together with jQuery. Tested with Safari Browser.  </p>
+
+<p id="par1" style="display:none;">You don't see me</p>
+
+<p id="par2" style="display:none;">You don't see me either</p>
+
+<p id="pa3" style="display:none;">Me neither</p>
+
+<button id="btnClickMe">Click me!</button>
+
+</body>
+</html>

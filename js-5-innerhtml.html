@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Javascript intro</title>
+
+</head>
+
+<body>
+
+<p>This example is based on code from the Microsoft presentations related to 98-375. This example shows how javascript basics work. Tested with Safari Browser.  </p>
+
+<form name="calculator">
+<input type="text" id="input1">
+<input type="text" id="input2">
+<button type="button" onclick="calculate();">Calculate sum!</button>
+</form>
+
+<p id="result" style="display:none;"></p>
+
+<script>
+function calculate() {
+	var input1 = document.getElementById("input1").value;
+	var input2 = document.getElementById("input2").value;
+	var result = document.getElementById("result");
+	
+	var sum = Number(input1) + Number(input2); /* Using Number-function; otherwise we see two strings concatenated  */
+	result.innerHTML = "<h2>RESULT: </h2> <p>"+sum+"</p>";
+	result.style.display = "block";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Javascript intro</title>
+<script>
+function myAwesomeAlert() {
+	alert('Alert via de myAwesomeAlert functie');
+}
+
+function mySecondAwesomeAlert(alertMsg) {
+	alert('Alert with message: ' + alertMsg);
+}
+</script>
+</head>
+
+<body onload="myAwesomeAlert()">
+
+<p>This example is based on code from the Microsoft presentations related to 98-375. This example shows how javascript basics work. Tested with Safari Browser.  </p>
+
+<button type="button" onclick="alert('Je hebt op de knop gedrukt');">Click me</button>
+<button type="button" onclick="myAwesomeAlert();">No, click me</button>
+<button type="button" onclick="mySecondAwesomeAlert('Derde knop ingedrukt');">OR click me</button>
+
+</body>
+</html>
